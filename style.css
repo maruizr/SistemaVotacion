@@ -1,0 +1,17 @@
+h2 {
+    font-family: sans-serif;
+    margin-bottom: 40px;
+}
+
+div {
+    margin-bottom: 5px;
+}
+
+.labels {
+    display: inline-block;
+    width: 200px;
+}
+
+.enviar {
+    margin-top: 30px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Votación</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Formulario de Votación:</h1>
+        <form action="">
+            <div>
+                <label class="labels" for="name">Nombre y Apellido</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label class="labels" for="alias">Alias</label>
+                <input type="text" name="alias" id="alias">
+            </div>
+            <div>
+                <label class="labels" for="rut">RUT</label>
+                <input type="number" name="rut" id="rut">
+            </div>
+            <div>
+                <label class="labels" for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label class="labels" for="region">Región</label>
+                <select name="region" id="region">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div>
+                <label class="labels" for="comuna">Comuna</label>
+                <select name="comuna" id="comuna">
+
+                </select>
+            </div>
+            <div>
+                <label class="labels" for="candidato">Candidato</label>
+                <select name="candidato" id="candidato">
+
+                </select>
+            </div>
+            <div>
+                <label class="labels" for="nosotros">Como se enteró de Nosotros</label>
+                <input type="checkbox" name="nos1" value="Web">
+                <label for="Web">Web</label>
+                <input type="checkbox" name="nos2" value="TV">
+                <label for="TV">TV</label>
+                <input type="checkbox" name="nos3" value="Redes Sociales">
+                <label for="Redes Sociales">Redes Sociales</label>
+                <input type="checkbox" name="nos4" value="Amigo">
+                <label for="Amigo">Amigo</label>
+            </div>
+
+            <div class="enviar">
+                <input type="submit" value="Votar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
