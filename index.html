@@ -7,11 +7,13 @@
     <title>Sistema de Votación</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="validacion.js"></script>
 </head>
 <body>
+
     <div>
         <h2>Formulario de Votación:</h1>
-        <form action="">
+        <form id="basic-form" action="enviar_form.php" onsubmit="return validarFormulario();">
             <div>
                 <label class="labels" for="name">Nombre y Apellido</label>
                 <input type="text" name="name" id="name">
@@ -22,7 +24,7 @@
             </div>
             <div>
                 <label class="labels" for="rut">RUT</label>
-                <input type="number" name="rut" id="rut">
+                <input type="text" name="rut" id="rut">
             </div>
             <div>
                 <label class="labels" for="email">Email</label>
@@ -59,9 +61,43 @@
             </div>
 
             <div class="enviar">
-                <input type="submit" value="Votar">
+                <button type="submit">Votar</button>
             </div>
         </form>
+        
+        <div id="mensaje"></div>
     </div>
+    <script>
+        $(document).ready(function() {
+          $("#basic-form").validate({
+            rules: {
+                name: {
+                required: true,
+                minlength: 5
+              },
+              rut: {
+                required: true
+              },
+              email: {
+                required: true,
+                minlength: 20
+              }
+            },
+            messages : {
+              name: {
+                required: "Debe ingresar su nombre y apellido",
+                minlength: "Debe ingresar su nombre y apellido"
+              },
+              alias: {
+                required: "Debe ingresar su RUT"
+              },
+              email: {
+                required: "Debe ingresar su email",
+                minlength: "Debe ingresar mínimo 20 cáracteres"
+              }
+            }
+          });
+        });
+      </script>
 </body>
 </html>
